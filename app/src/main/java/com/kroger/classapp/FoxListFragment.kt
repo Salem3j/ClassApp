@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.random.Random
 
-class CharacterListFragment : Fragment() {
+class FoxListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,26 +19,24 @@ class CharacterListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_character_list, container, false)
         val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val characters = mutableListOf<RickAndMortyCharacter>()
+        val characters = mutableListOf<Fox>()
 
-        val characterNames = listOf("Rick", "Morty", "Summer", "Beth")
+        val foxNames = listOf("Orange Fox", "Red Fox", "Arctic Fox", "Black Fox")
 
         for (i in 0..30) {
-            characters.add(createCharacter(i, characterNames.random()))
+            characters.add(createFox(i, foxNames.random()))
         }
 
-        val adapter = RickAndMortyCharacterAdapter(characters)
+        val adapter = FoxAdapter(characters)
         recyclerView.adapter = adapter
 
         return view
     }
 
-    private fun createCharacter(id: Int, name: String) = RickAndMortyCharacter(
-        name = name,
-        picture = R.drawable.ic_launcher_background,
-        age = Random.nextInt(10, 99),
+    private fun createFox(id: Int, name: String) = Fox(
         id = id,
-        planet = "patrioque",
-        relation = listOf(),
+        name = name,
+        age = Random.nextInt(10, 99),
+        image = R.drawable.ic_launcher_background,
     )
 }
