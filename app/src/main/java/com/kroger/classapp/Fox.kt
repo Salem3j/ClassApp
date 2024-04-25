@@ -4,5 +4,6 @@ data class Fox(
     val id: Int,
     val name: String,
     val age: Int,
-    val image: Int,
+    val habitat: String,
+    val image: String,
 )

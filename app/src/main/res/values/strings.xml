@@ -7,5 +7,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="fox_name">Name: %s</string>
-    <string name="fox_age">Age: %d</string>
+    <string name="fox_age">Age: %s</string>
+    <string name="fox_habitat">Habitat: %s</string>
+    <string name="content_description">picture of a fox</string>
 </resources>

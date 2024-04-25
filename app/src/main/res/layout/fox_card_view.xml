@@ -32,7 +32,7 @@
             tools:text="@string/fox_name"
             android:layout_margin="16dp"/>
         <TextView
-            android:id="@+id/fox_description"
+            android:id="@+id/fox_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/fox_image"
